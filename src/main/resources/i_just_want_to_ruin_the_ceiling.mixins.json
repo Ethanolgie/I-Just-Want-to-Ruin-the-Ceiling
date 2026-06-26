@@ -4,6 +4,7 @@
   "package": "cafe.ethany.i_just_want_to_ruin_the_ceiling.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "RuinBlockMixin"
   ],
   "client": [
   ],

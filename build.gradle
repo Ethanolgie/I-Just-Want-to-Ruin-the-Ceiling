@@ -7,9 +7,52 @@ plugins {
 
 version = mod_version
 group = mod_group_id
+repositories.clear()
 
 repositories {
+
     mavenLocal()
+
+    maven { url = "https://maven.is-immensely.gay/releases" } // Revelationary, Fractal, AEA, Arrowhead, Dimensional Reverb...
+    maven { url = "https://maven.shedaniel.me/" } // REI
+    maven { url = "https://maven.terraformersmc.com/" } // Modmenu, EMI
+    maven { url = "https://maven.nucleoid.xyz/" } // Common Protection API
+    maven { url = "https://maven.blamejared.com" } // JEI
+    maven { url = "https://maven.ladysnake.org/releases" } // Cardinal Components API
+    maven { url = "https://maven.jamieswhiteshirt.com/libs-release/" } // Entity Reach Attribute
+    maven { url = "https://api.modrinth.com/maven" }
+    maven { url = "https://cfa2.cursemaven.com" }
+    maven { url = "https://mvn.devos.one/releases/" } // Porting Lib
+    maven { url = "https://repo.unascribed.com" } // Ears API
+    maven { url = "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/" } // Modonomicon
+    maven { url = "https://maven.wispforest.io/releases" }
+    maven { url = "https://maven.theillusivec4.top/" } // curios
+    //clone from spectral-deco
+
+    maven {
+        url = "https://neoforged.forgecdn.net/releases"
+    }
+    maven {
+        url = "https://neoforged.forgecdn.net/mojang-meta"
+    }
+
+    maven {
+        url = "https://maven.aliyun.com/repository/public"
+    }
+
+    maven {
+        url = "https://libraries.minecraft.net/"
+    }
+
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
+
+    mavenCentral()
 }
 
 base {
@@ -91,6 +134,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
+    implementation("de.dafuqs:Spectrum:1.11.8-1.21.1-neo")
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
